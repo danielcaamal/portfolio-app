@@ -19,7 +19,7 @@ export default function RootLayout({
         <div className="z-10">
           <HidableNavbar />
         </div>
-        <div className="z-0 w-full h-full px-12 md:px-24">
+        <div className="z-0 w-full h-full">
           {children}
         </div>
       </body>

@@ -5,7 +5,7 @@ export default function About() {
   const { age, experience } = getMyDates()
 
   return (
-      <div className="shrink-0 py-20">
+      <div className="shrink-0 py-20 px-12 md:px-24">
         <div className="container text-center mb-12">
           <p className="text-2xl text-sky-400">ABOUT</p>
           <p className="text-4xl ">
