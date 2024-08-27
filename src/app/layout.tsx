@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import HidableNavbar from "./_components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Daniel Caamal Herrera",
@@ -16,7 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="w-full h-full flex flex-col font-serif">  
+        <div className="z-10">
+          <HidableNavbar />
+        </div>
+        <div className="z-0 w-full h-full px-12 md:px-24">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
