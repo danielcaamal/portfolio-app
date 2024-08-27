@@ -46,13 +46,12 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
+              <img
                 className="rounded-full"
                 src="/images/linkedin-icon.png"
                 alt="LinkedIn"
                 width={40}
                 height={40}
-                priority
               />
             </a>
             <a
