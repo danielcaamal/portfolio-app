@@ -1,18 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { getMyDates } from "../_utils/getMyBirthDate";
-
+import { PageTitle } from "../_components"
+import { getProfile } from "../_utils"
 
 export default function About() {
-  const { age, experience } = getMyDates()
+  const { age, experience } = getProfile()
 
   return (
-      <div className="shrink-0 py-20 px-12 md:px-24">
-        <div className="container text-center mb-12">
-          <p className="text-2xl text-sky-400">ABOUT</p>
-          <p className="text-4xl ">
-            Let me tell you a little bit about myself. 
-          </p>
-        </div>
+      <div className="">
+        <PageTitle title="ABOUT ME" subtitle="Let me introduce myself" />
         <div className="container flex items-center flex-col md:flex-none">
           <img className="md:float-left h-40 md:h-60 w-auto rounded-full shadow-lg mb-6 md:mb-0 md:mr-8 m-5" src="/images/me.jpeg" alt="Profile"/>
           <div className="text-lg md:text-2xl text-justify leading-relaxed py-5">
@@ -23,7 +18,9 @@ export default function About() {
             </p>
             <p className="mb-4">
               I hold a Bachelor&apos;s degree in Mechatronic Engineering from the Universidad Autónoma de Yucatán, 
-              where I graduated with an impressive GPA of 94.80. My thesis, titled <span className="text-sky-400">&quot;Energy Efficient Framework for Sport Wearable AIoT Cardiac Arrhythmia Detection System&quot;</span>, was published in the prestigious <span className="text-sky-400">IEEE Transactions on Instrumentation & Measurement journal</span> in 2021.
+              where I graduated with an impressive GPA of 94.80. My thesis, titled 
+              <span className="text-sky-400">&quot;Energy Efficient Framework for Sport Wearable AIoT Cardiac Arrhythmia Detection System&quot;</span>
+              , was published in the prestigious <span className="text-sky-400">IEEE Transactions on Instrumentation & Measurement journal</span> in 2021.
             </p>
             <p className="mb-4">
               I bring over {experience} years of experience in the IT industry, where I&apos;ve had the opportunity to grow 
