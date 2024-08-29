@@ -10,10 +10,14 @@ interface ExperienceCardProps {
   urlName?: string;
 }
 
-
 export const ExperienceCard = ({
-  title, subtitle, name, description, isWork=true, urlName
-}: ExperienceCardProps) => { 
+  title,
+  subtitle,
+  name,
+  description,
+  isWork = true,
+  urlName,
+}: ExperienceCardProps) => {
   return (
     <div className="container flex flex-row items-center justify-center mt-6 w-full">
       {/* Card title, subtitle */}
@@ -25,11 +29,11 @@ export const ExperienceCard = ({
         {/* Card icon */}
         <div className="basis-1/4 lg:px-2">
           <div className="rounded-full h-12 w-12 bg-white p-1 items-center justify-center">
-            {
-              isWork  
-                ? <MdWork  className="grow-0 w-full h-full" color="black"/>
-                : <IoIosSchool className="grow-0 w-full h-full" color="black"/>
-            }
+            {isWork ? (
+              <MdWork className="grow-0 w-full h-full" color="black" />
+            ) : (
+              <IoIosSchool className="grow-0 w-full h-full" color="black" />
+            )}
           </div>
         </div>
       </div>
@@ -43,4 +47,4 @@ export const ExperienceCard = ({
       </div>
     </div>
   );
-}
+};

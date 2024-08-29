@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Footer, HidableNavbar } from "./_components";
 
-
 export const metadata: Metadata = {
   title: "Daniel Caamal Herrera",
   description: "Daniel Caamal Herrera's personal website",
@@ -15,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-full h-full flex flex-col font-serif">  
+      <body className="w-full h-full flex flex-col font-serif">
         <div className="z-10">
           <HidableNavbar />
         </div>
