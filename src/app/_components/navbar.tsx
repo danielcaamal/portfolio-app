@@ -29,7 +29,6 @@ export const HidableNavbar = () => {
       // setShowNavbar(true);
       window.removeEventListener("mousemove", () => {});
     } else {
-      console.log("dynamic path");
       setIsStaticPath(false);
       const handleMouseMove = (e: MouseEvent) => {
         if (e.clientY < 100) {

@@ -8,7 +8,7 @@ interface OfferCardProps {
 export const OfferCard = ({ name, description, imageSrc }: OfferCardProps) => {
   return (
     <div className="flex flex-row md:flex-col items-center text-center px-6 md:py-2">
-      <div className="flex flex-col items-center basis basis-2/5 p-6">
+      <div className="flex flex-col items-center basis basis-2/5 p-6 md:p-0">
         <IconWrapper src={imageSrc} className={"bg-orange-400"} />
         <p className="text-xl text-bold md:text-2xl leading-relaxed md:py-5 px-2 text-sky-500 text-center">
           {name}
