@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { HidableNavbar } from "./_components";
+import { Footer, HidableNavbar } from "./_components";
 
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function RootLayout({
         <div className="z-0 w-full h-full flex flex-col items-center justify-center py-20 px-12 md:px-24">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

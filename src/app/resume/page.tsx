@@ -1,4 +1,4 @@
-import { DownloadCV, PageTitle } from "../_components";
+import { DownloadCV, Footer, PageTitle } from "../_components";
 import { ExperienceCard, ResumeCards } from "./_components";
 import { useResume } from "./_hooks";
 
@@ -53,7 +53,6 @@ export default function Resume() {
             </ul>
           </ResumeCards>
         </div>
-        <DownloadCV/>
         <div className="flex flex-col text-center mt-10">
           <span className="text-3xl text-orange-600 text-bold">Work Experience</span>
           {
@@ -86,6 +85,7 @@ export default function Resume() {
             ))
           }
         </div>
+        <DownloadCV/>
       </div>
     </div>
   )

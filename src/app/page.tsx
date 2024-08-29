@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -44,13 +45,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="rounded-full"
-                src="/images/linkedin-icon.png"
-                alt="LinkedIn"
-                width={40}
-                height={40}
-              />
+              <FaLinkedin size={40} />
             </a>
             <a
               className="hover:opacity-50"
@@ -58,13 +53,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="rounded-full bg-white"
-                src="/images/github-icon.png"
-                alt="Github"
-                width={40}
-                height={40}
-              />
+              <FaGithub size={40} />
             </a>
           </div>
         </div>
