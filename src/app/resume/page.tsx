@@ -1,35 +1,10 @@
 import { DownloadCV, PageTitle } from "../_components";
-import { getProfile, getSkills } from "../_utils";
-import { ResumeCards } from "./_components";
+import { ExperienceCard, ResumeCards } from "./_components";
+import { useResume } from "./_hooks";
 
 
 export default function Resume() {
-  const { profile, skill, firstName, lastName, birthDate, actualPosition, website, email } = getProfile();
-  const skills = getSkills();
-
-  const profileMap = [
-    {
-      title: "Full Name",
-      description: `${firstName} ${lastName}`,
-    }, 
-    {
-      title: "Birth Date",
-      description: birthDate.toLocaleDateString(),
-    }, 
-    {
-      title: "Actual Position",
-      description: actualPosition,
-    }, 
-    {
-      title: "Website",
-      description: website,
-    }, 
-    {
-      title: "Email",
-      description: email,
-    }
-  ]
-
+  const { profile, skills, skill, profileMap, workExperience, education } = useResume();
 
   return (
     <div className="h-full">
@@ -52,7 +27,7 @@ export default function Resume() {
             </div>
           </ResumeCards>
           {/* Skills */}
-          <ResumeCards title="Skills" description={skill}>
+          <ResumeCards title="Skills (Top 10)" description={skill}>
             <ul className="list-inside py-5 w-full">
               {skills.map((skill, index) => (
                 <div key={index}>
@@ -69,7 +44,7 @@ export default function Resume() {
                     <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-orange-100">
                       <div
                         style={{ width: `${skill.level}%` }}
-                        className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-sky-400` }
+                        className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-400` }
                       ></div>
                     </div>
                   </div>
@@ -79,6 +54,38 @@ export default function Resume() {
           </ResumeCards>
         </div>
         <DownloadCV/>
+        <div className="flex flex-col text-center mt-10">
+          <span className="text-3xl text-orange-600 text-bold">Work Experience</span>
+          {
+            workExperience.map((experience, index) => (
+              <ExperienceCard
+                key={index}
+                title={experience.title}
+                subtitle={`${experience.initialDate} - ${experience.finalDate}`}
+                name={experience.company}
+                description={experience.description}
+                isWork={true}
+                urlName={experience.urlCompany}
+              />
+            ))
+          }
+        </div>
+        <div className="flex flex-col text-center mt-10">
+          <span className="text-3xl text-orange-600 text-bold">Education</span>
+          {
+            education.map((experience, index) => (
+              <ExperienceCard
+                key={index}
+                title={experience.title}
+                subtitle={`${experience.initialDate} - ${experience.finalDate}`}
+                name={experience.institution}
+                description={experience.description}
+                isWork={false}
+                urlName={experience.urlInstitution}
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   )

@@ -5,45 +5,30 @@ interface WorkExperience {
   initialDate: string;
   finalDate: string;
   description: string;
+  urlCompany?: string;
 }
 
 export const getWorkExperience = (): WorkExperience[] => {
   return [
     {
-      title: "Frontend Developer",
-      company: "Globant",
+      title: "Senior Full Stack Developer",
+      company: "Nextia",
       location: "Remote",
-      initialDate: "2021-03-01",
+      initialDate: "2022-05-01",
       finalDate: "Present",
       description:
-        "Developing web applications using React, Redux, TypeScript, and other technologies.",
+        "Led the design, development, and maintenance of Infonavit’s backend (Node.js) and frontend (React) systems, supporting Mexico’s largest mortgage lender. Managed a high-dependency, high-concurrency environment for the platform mi cuenta (micuenta.infonavit.org.mx), ensuring seamless performance and reliability for millions of users. Develop and maintenance of Full Stack Solutions",
+      urlCompany: "https://nextia.mx/",
     },
     {
-      title: "Fullstack Developer",
-      company: "Globant",
-      location: "Remote",
-      initialDate: "2020-09-01",
-      finalDate: "2021-03-01",
+      title: "Semi Junior Backend Developer",
+      company: "Lynx",
+      location: "Merida, Yucatan, Mexico",
+      initialDate: "2021-09-01",
+      finalDate: "2022-05-30",
       description:
-        "Developing web applications using React, Redux, TypeScript, Node.js, Express, and other technologies.",
-    },
-    {
-      title: "Fullstack Developer",
-      company: "Globant",
-      location: "Remote",
-      initialDate: "2019-09-01",
-      finalDate: "2020-09-01",
-      description:
-        "Developing web applications using React, Redux, TypeScript, Node.js, Express, and other technologies.",
-    },
-    {
-      title: "Fullstack Developer",
-      company: "Globant",
-      location: "Remote",
-      initialDate: "2018-09-01",
-      finalDate: "2019-09-01",
-      description:
-        "Developing web applications using React, Redux, TypeScript, Node.js, Express, and other technologies.",
+        "Develop and maintenance of the Gasomarshal Python's Backend Volumetric Systems IoT (RESTful API, HTTP and database management) for SMARTGAS and other clients like G500, Gulf, FULLGAS and LAGAS.",
+      urlCompany: "http://www.lynxis.mx/",
     },
   ].sort((a, b) => {
     return (

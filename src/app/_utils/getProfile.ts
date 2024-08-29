@@ -26,7 +26,7 @@ export const getProfile = () => {
       Lead developer in multiple projects, with experience in Full-Stack solutions and problems-solving.
     `,
     skill: `
-      Proficient in TypeScript, JavaScript, NodeJS, NEST.js, and NEXT.js, React, and Angular.
+      Proficient in TypeScript, JavaScript, NodeJS, NEST.js, and NEXT.js with React.
       Experience in Backend and Frontend development, with a strong affinity for data manipulation and architecture design.
     `,
   };

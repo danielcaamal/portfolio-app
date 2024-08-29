@@ -5,27 +5,31 @@ interface Education {
   initialDate: string;
   finalDate: string;
   description: string;
+  urlInstitution?: string;
 }
 
 export const getEducation = (): Education[] => {
   return [
     {
-      title: "Bachelor of Computer Science",
-      institution: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      initialDate: "2014-08-01",
-      finalDate: "2018-05-01",
+      title: "Data Engineer Nanodegree",
+      institution: "Udacity",
+      location: "Remote",
+      initialDate: "2024-02-01",
+      finalDate: "2024-05-01",
       description:
-        "The Bachelor of Computer Science (BCS) is a four-year undergraduate degree in the field of computer science. The degree focuses on the study of computer algorithms, software systems, and computer networks.",
+        "The Data Engineering Nanodegree program is designed to teach students how to create new data pipelines and work with big data at scale. Students will work on building big data pipelines, deploying data lakes, and automating data pipelines.",
+      urlInstitution:
+        "https://www.udacity.com/course/data-engineer-nanodegree--nd027",
     },
     {
-      title: "High School Diploma",
-      institution: "Berkeley High School",
-      location: "Berkeley, CA",
-      initialDate: "2010-08-01",
-      finalDate: "2014-05-01",
+      title: "Mechatronic Engineering",
+      institution: "Universidad Autónoma de Yucatán",
+      location: "Merida, Yucatan, Mexico",
+      initialDate: "2016-07-01",
+      finalDate: "2021-05-30",
       description:
-        "The High School Diploma is a four-year degree that certifies the completion of high school education. The degree focuses on the study of mathematics, science, history, and literature.",
+        "Graduated by thesis with an outstanding curricular trajectory average (94.80). I developed a project with a EKG signal processing system for the detection of arrhythmias in real time with trained AI models with a	participation in “Energy Efficient Framework for Sport Wearable AIoT Cardia Arrhythmia Detection System” (2021) for the Journal IEEE Transactions on Instrumentation & Measurement.",
+      urlInstitution: "https://uady.mx/",
     },
   ].sort((a, b) => {
     return (
