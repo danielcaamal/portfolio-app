@@ -19,7 +19,7 @@ export default function Home() {
           </div>
           <div className="p-4 rounded-lg">
             <p className="text-lg sm:text-2xl md:text-3xl font-medium text-center">
-              | Full Stack Developer |
+              | Data Engineer | Full Stack Developer | 
             </p>
           </div>
           <div>

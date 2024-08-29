@@ -27,7 +27,7 @@ export default function Resume() {
             </div>
           </ResumeCards>
           {/* Skills */}
-          <ResumeCards title="Skills (Top 10)" description={skill}>
+          <ResumeCards title="Top Skills" description={skill}>
             <ul className="list-inside py-5 w-full">
               {skills.map((skill, index) => (
                 <div key={index}>
