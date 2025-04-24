@@ -2,9 +2,9 @@ import { DownloadCV, Footer, PageTitle } from "../_components";
 import { ExperienceCard, ResumeCards } from "./_components";
 import { useResume } from "./_hooks";
 
-export default function Resume() {
+export default async function Resume() {
   const { profile, skills, skill, profileMap, workExperience, education } =
-    useResume();
+    await useResume();
 
   return (
     <div className="h-full min-h-screen">
