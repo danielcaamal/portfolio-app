@@ -27,7 +27,7 @@ export default function Projects() {
           <ProjectCard
             title="Data engineering"
             releaseDate="Julio 2024"
-            description="Generacion de un DAG para la carga de datos en un data warehouse. El DAG se encarga de extraer, transformar y cargar datos desde diferentes fuentes hacia el data warehouse, asegurando la integridad y calidad de los datos."
+            description="Generating a DAG for loading data into a data warehouse. The DAG is responsible for extracting, transforming and loading data from different sources into the data warehouse, ensuring the integrity and quality of the data."
             urls={[
               "/images/data-engineering/home.png",
               "/images/data-engineering/DAG.png",
