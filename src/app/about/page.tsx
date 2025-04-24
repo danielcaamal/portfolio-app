@@ -24,7 +24,7 @@ export default function About() {
           <p className="mb-4">
             I hold a Bachelor&apos;s degree in Mechatronic Engineering from the
             Universidad Autónoma de Yucatán, where I graduated with an
-            impressive GPA of 94.80. My thesis, titled
+            impressive GPA of 94.80. My thesis, titled{" "}
             <span className="text-sky-400">
               &quot;Energy Efficient Framework for Sport Wearable AIoT Cardiac
               Arrhythmia Detection System&quot;

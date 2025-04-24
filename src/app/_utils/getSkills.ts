@@ -84,6 +84,12 @@ export const getSkills = (): Skill[] => {
         "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
       level: 80,
     },
+    {
+      name: "Generative AI",
+      description:
+        "Generative AI refers to algorithms that can generate new content, including text, images, audio, and video, based on training data.",
+      level: 80,
+    },
   ].sort((a, b) => {
     if (a.level > b.level) return -1;
     if (a.level < b.level) return 1;
