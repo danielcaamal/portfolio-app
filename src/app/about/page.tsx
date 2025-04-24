@@ -1,9 +1,17 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useState } from "react";
 import { PageTitle } from "../_components";
 import { getProfile } from "../_utils";
 
-export default async function About() {
-  const { age, experience } = await getProfile();
+export default function About() {
+  const [profile, setProfile] = useState({ age: 0, experience: 0 });
+
+  useEffect(() => {
+    getProfile().then(({ age, experience }) => {
+      setProfile({ age, experience });
+    });
+  }, []);
 
   return (
     <div className="h-full min-h-screen">
@@ -16,10 +24,10 @@ export default async function About() {
         />
         <div className="text-lg md:text-2xl text-justify leading-relaxed py-5">
           <p className="mb-4">
-            My name is Daniel Karim Caamal Herrera, and I am a {age}-year-old
-            Mechatronic Engineer with a passion for technology and innovation.
-            My ultimate goal is to travel the world and contribute to
-            groundbreaking projects that challenge and inspire me.
+            My name is Daniel Karim Caamal Herrera, and I am a {profile.age}
+            -year-old Mechatronic Engineer with a passion for technology and
+            innovation. My ultimate goal is to travel the world and contribute
+            to groundbreaking projects that challenge and inspire me.
           </p>
           <p className="mb-4">
             I hold a Bachelor&apos;s degree in Mechatronic Engineering from the
@@ -36,11 +44,11 @@ export default async function About() {
             in 2021.
           </p>
           <p className="mb-4">
-            I bring over {experience} years of experience in the IT industry,
-            where I&apos;ve had the opportunity to grow and develop my skills
-            across multiple roles. I began my career as a Backend Developer,
-            where I discovered a strong affinity for data manipulation and
-            architecture design.
+            I bring over {profile.experience} years of experience in the IT
+            industry, where I&apos;ve had the opportunity to grow and develop my
+            skills across multiple roles. I began my career as a Backend
+            Developer, where I discovered a strong affinity for data
+            manipulation and architecture design.
           </p>
           <p className="mb-4">
             Over time, I continued to hone my expertise in backend development,
