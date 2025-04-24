@@ -4,7 +4,7 @@ export const differenceInYears = (date1: Date, date2: Date) => {
   );
 };
 
-export const getProfile = () => {
+export const getProfile = async () => {
   const now = new Date();
   const bi = new Date("1997-12-26T00:00:00.000-06:00");
   const initialExp = new Date("2021-03-01T00:00:00.000-06:00");
@@ -16,10 +16,22 @@ export const getProfile = () => {
     email: "danielcaamal97@gmail.com",
     actualPosition: "Software Developer",
     website: "https://portfolio-b273a.web.app/",
-    now,
-    birthDate: bi,
+    now: now.toLocaleDateString("es-MX", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }),
+    birthDate: bi.toLocaleDateString("es-MX", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }),
     age: differenceInYears(now, bi),
-    initialExperience: initialExp,
+    initialExperience: initialExp.toLocaleDateString("es-MX", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }),
     experience: differenceInYears(now, initialExp),
     profile: `
       Full Stack Engineer with affinity for backend development and architecture design. 

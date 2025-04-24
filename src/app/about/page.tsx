@@ -2,8 +2,8 @@
 import { PageTitle } from "../_components";
 import { getProfile } from "../_utils";
 
-export default function About() {
-  const { age, experience } = getProfile();
+export default async function About() {
+  const { age, experience } = await getProfile();
 
   return (
     <div className="h-full min-h-screen">
