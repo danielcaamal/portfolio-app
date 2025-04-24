@@ -5,7 +5,7 @@ import {
   getWorkExperience,
 } from "@/app/_utils";
 
-export const useResume = () => {
+export const useResume = async () => {
   const {
     profile,
     skill,
@@ -15,7 +15,7 @@ export const useResume = () => {
     actualPosition,
     website,
     email,
-  } = getProfile();
+  } = await getProfile();
   const skills = getSkills();
   const workExperience = getWorkExperience();
   const education = getEducation();
@@ -27,7 +27,7 @@ export const useResume = () => {
     },
     {
       title: "Birth Date",
-      description: birthDate.toLocaleDateString(),
+      description: birthDate,
     },
     {
       title: "Actual Position",
