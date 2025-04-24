@@ -1,5 +1,5 @@
 import { ProjectCard } from "./_components/ProjectCard";
-import { DownloadCV, Footer, PageTitle } from "../_components";
+import { PageTitle } from "../_components";
 
 export default function Projects() {
   return (
