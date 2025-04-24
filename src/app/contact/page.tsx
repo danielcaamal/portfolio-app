@@ -1,9 +1,18 @@
+"use client";
+import { useEffect, useState } from "react";
 import { DownloadCV, PageTitle } from "../_components";
 import { getOffers } from "../_utils";
 import { OfferCard } from "./_components";
+import { Offer } from "../_utils/getOffers";
 
 export default function Contact() {
-  const offers = getOffers();
+  const [offers, setOffers] = useState<Offer[]>([]);
+
+  useEffect(() => {
+    getOffers().then((o) => {
+      setOffers(o);
+    });
+  }, []);
 
   return (
     <div className="h-full min-h-screen">

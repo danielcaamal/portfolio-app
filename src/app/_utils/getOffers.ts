@@ -1,10 +1,10 @@
-interface Offer {
+export interface Offer {
   name: string;
   description: string;
   iconSrc: string;
 }
 
-export const getOffers = () => {
+export const getOffers = async () => {
   const offers: Offer[] = [
     {
       name: "Database Design",
