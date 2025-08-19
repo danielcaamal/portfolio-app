@@ -22,7 +22,7 @@ export const getSkills = (): Skill[] => {
       name: "NextJS",
       description:
         "Next.js is an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.",
-      level: 80,
+      level: 85,
     },
     {
       name: "NodeJS",
@@ -88,6 +88,18 @@ export const getSkills = (): Skill[] => {
       name: "Generative AI",
       description:
         "Generative AI refers to algorithms that can generate new content, including text, images, audio, and video, based on training data.",
+      level: 80,
+    },
+    {
+      name: "Grafana",
+      description:
+        "Grafana is an open-source platform for monitoring and observability. It allows you to visualize your data in real-time and create dashboards to monitor your systems.",
+      level: 80,
+    },
+    {
+      name: "Prometheus",
+      description:
+        "Prometheus is an open-source monitoring system with a dimensional data model, flexible query language, efficient time series database, and modern alerting approach.",
       level: 80,
     },
   ].sort((a, b) => {

@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Daniel Caamal Herrera - Portfolio
 
-## Getting Started
+A modern, minimalist portfolio website showcasing my work as a Full Stack Developer and Data Engineer.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Design**: Clean, minimalist interface with smooth animations
+- **Responsive**: Optimized for all devices and screen sizes
+- **Fast Performance**: Built with Next.js 14 and optimized for speed
+- **Interactive**: Smooth animations and micro-interactions using Framer Motion
+- **Accessible**: WCAG compliant with proper focus management
+- **SEO Optimized**: Meta tags and structured data for better search visibility
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **UI Components**: NextUI
+- **Icons**: React Icons
+- **Deployment**: Docker & Vercel ready
+
+## 📦 Installation & Setup
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- Docker (optional, for containerized deployment)
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/danielcaamal/portfolio-app.git
+   cd portfolio-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Docker Deployment
+
+1. **Build and run with Docker Compose**
+   ```bash
+   docker-compose up --build
+   ```
+
+2. **Or build and run manually**
+   ```bash
+   # Build the image
+   docker build -t portfolio-app .
+   
+   # Run the container
+   docker run -p 3000:3000 portfolio-app
+   ```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/
+│   ├── _components/     # Shared components
+│   ├── _utils/         # Utility functions
+│   ├── about/          # About page
+│   ├── contact/        # Contact page
+│   ├── projects/       # Projects page
+│   ├── resume/         # Resume page
+│   ├── globals.css     # Global styles
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Home page
+├── public/
+│   ├── images/         # Project images
+│   └── files/          # Static files (CV, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Colors
+- **Primary**: Sky Blue (#0ea5e9)
+- **Accent**: Orange (#f97316)
+- **Background**: Dark gradient
+- **Text**: White and gray variations
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Typography
+- **Font**: Inter (Google Fonts)
+- **Code**: JetBrains Mono
+- **Weights**: 300-900
 
-## Learn More
+### Components
+- **Glass Effect**: Backdrop blur with transparency
+- **Cards**: Rounded corners with hover effects
+- **Buttons**: Gradient backgrounds with animations
+- **Navigation**: Sticky header with smooth transitions
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Home
+- Hero section with animated introduction
+- Social media links
+- Call-to-action button
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### About
+- Personal introduction
+- Professional journey
+- Key statistics
 
-## Deploy on Vercel
+### Projects
+- Project showcase with image galleries
+- GitHub and live demo links
+- Detailed descriptions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Resume
+- Skills with progress bars
+- Work experience timeline
+- Education history
+- Downloadable CV
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Contact
+- Service offerings
+- Contact information
+- Social media links
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Deploy automatically on push to main branch
+3. Custom domain configuration available
+
+### Docker
+1. Build the Docker image
+2. Deploy to any container platform
+3. Health checks included
+
+### Static Export
+```bash
+npm run build
+```
+The static files will be generated in the `out/` directory.
+
+## 🔧 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📞 Contact
+
+- **Email**: danielcaamal97@gmail.com
+- **LinkedIn**: [Daniel Caamal Herrera](https://www.linkedin.com/in/daniel-caamal-herrera/)
+- **GitHub**: [danielcaamal](https://github.com/danielcaamal)
+
+---
+
+Made with ❤️ using Next.js & TypeScript
